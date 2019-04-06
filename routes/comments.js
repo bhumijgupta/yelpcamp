@@ -13,7 +13,7 @@ router.get("/new", middleware.isLoggedIn, (req, res) => {
             req.flash("err", "Something went wrong");
             console.log(err);
         } else {
-            console.log("campground found");
+            // console.log("campground found");
             res.render("comments/new", {
                 campground: campground
             });
@@ -40,7 +40,7 @@ router.post("/", middleware.isLoggedIn, (req, res) => {
                     comment.save();
                     campground.comments.push(comment);
                     campground.save().then((suc) => {
-                        console.log("comment added");
+                        // console.log("comment added");
                         req.flash("suc", "Comment added");
                         res.redirect("/campgrounds/" + req.params.id);
                     });

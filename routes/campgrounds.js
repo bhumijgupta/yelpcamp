@@ -36,7 +36,7 @@ router.post("/", middleware.isLoggedIn, (req, res) => {
         if (err) {
             console.log(err);
         } else {
-            console.log(newlyCreated);
+            // console.log(newlyCreated);
             req.flash("suc", "Successfully added campground");
             res.redirect("/campgrounds");
         }
