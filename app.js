@@ -17,9 +17,6 @@ var commentRoutes = require("./routes/comments"),
   campgroundRoutes = require("./routes/campgrounds"),
   authRoutes = require("./routes/index");
 
-if (dotenv.error) {
-  console.log(dotenv.error);
-}
 var db_url = process.env.DB_URL || "mongodb://localhost/yelp_camp_v9";
 
 app.set("view engine", "ejs");
